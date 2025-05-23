@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p>Digite um número de 1 a 10:</p>
+
+  <input id="palpite">
+  <button onclick="adivinhar()">Chutar</button>
+
+  <script>
+    var numeroSecreto = parseInt(Math.random() * 10) + 1;
+    var tentativas = 0;
+
+    function adivinhar() {
+      var palpite = document.getElementById("palpite").value;
+      tentativas = tentativas + 1;
+
+      if (palpite == numeroSecreto) {
+        alert("Acertou! Tentativas: " + tentativas);
+      } else {
+        alert("Errou! Tente de novo.");
+      }
+
+      document.getElementById("palpite").value = "";
+    }
+  </script>
+
+</body>
+</html>

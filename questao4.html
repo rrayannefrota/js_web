@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+ <p>Senha:</p>
+  <input id="s1" type="password">
+
+  <p>Confirmar Senha:</p>
+  <input id="s2" type="password">
+
+  <br><br>
+  <button onclick="
+    if (document.getElementById('s1').value == document.getElementById('s2').value) {
+      alert('Senhas iguais!');
+    } else {
+      alert('Senhas diferentes!');
+    }
+  ">Verificar</button>
+</body>
+</html>
